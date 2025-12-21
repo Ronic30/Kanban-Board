@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="dashboard">
+        <div class="nav">
+            <div class="logo">Kanban</div>
+            <div class="new-task">
+                Add Task
+            </div>
+            <div class="task">
+                <div class="about-task">
+                    <div class="title1">ADD TASK</div>
+                    <div class="task-name">
+                        Task Name
+                        <br>
+                        <textarea name="name" id="task-name" required maxlength="40" cols="25" rows="1"></textarea>
+                    </div>
+                    <div class="task-desc">
+                        Description
+                        <br>
+                        <textarea name="decs" id="task-desc" required maxlength="80" cols="25" rows="5"></textarea>
+                    </div>
+                    <div class="submit">Submit</div>
+                </div>
+            </div>
+        </div>
+        <div class="board"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
