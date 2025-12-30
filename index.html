@@ -4,36 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanban Board</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="dashboard">
-        <div class="nav">
-            <div class="logo">Kanban</div>
-            <div class="new-task">
-                Add Task
+    <main>
+        <nav>
+            <div class="hleft">Kanban</div>
+            <div class="hright">
+                <button id="toggle-modal">Add Task</button>
             </div>
-            <div class="task">
-                <div class="about-task">
-                    <div class="title1">ADD TASK</div>
-                    <div class="task-name">
-                        Task Name
-                        <br>
-                        <textarea name="name" id="task-name" required maxlength="40" cols="25" rows="1"></textarea>
-                    </div>
-                    <div class="task-desc">
-                        Description
-                        <br>
-                        <textarea name="decs" id="task-desc" required maxlength="80" cols="25" rows="5"></textarea>
-                    </div>
-                    <div class="submit">Submit</div>
+        </nav>
+        <section class="board">
+            <div id="todo" class="task-column">
+                <div class="heading">
+                    <div class="left">To Do</div>
+                    <div class="right">Count</div>
                 </div>
             </div>
+            <div id="progress" class="task-column">
+                <div class="heading">
+                    <div class="left">In Progress</div>
+                    <div class="right">Count</div >
+                </div>
+            </div>
+
+            <div id="done" class="task-column">
+                <div class="heading">
+                    <div class="left">Done</div>
+                    <div class="right">Count</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal add-new-task">
+        <div class="bg"></div>
+        <div class="center">
+            <input type="text" id="task-title-input" placeholder="Task Title">
+            <textarea name="" id="task-desc-input" placeholder="Task Description"></textarea>
+            <button id="add-new-task">Add Task</button>
         </div>
-        <div class="board"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
